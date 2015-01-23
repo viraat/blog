@@ -1,23 +1,111 @@
 ---
-layout: default
+layout: home
 ---
+<div class="profile">
+  <div class="overlay">
+    <div class="info">
+      <img src="/images/Viraat.jpg" alt="Viraat Aryabumi">
+      <div class="name">
+        <p>Viraat Aryabumi</p>
+      </div>
+      <div class="skills">
+        <p><i class="fa fa-code"></i> Python • Javascript  </p>
+      </div>
+      <div class="interests">
+        <p><i class="fa fa-heart-o"></i> Travel • Food • Design • Photography </p>
+      </div>
+      <div class="sports">
+      	<p><i class="fa fa-futbol-o"></i> Golf • Football • Cricket </p>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/viraat94" target="_blank" class="facebook"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/viraat7" target="_blank" class="twitter"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="https://github.com/var7" target="_blank" class="github"><i class="fa fa-github-alt fa-lg"></i></a>
+        <a href="mailto:viraat94@gmail.com" target="_top" class="mail"><i class="fa fa-paper-plane fa-lg"></i></a>
+        <a href="https://www.facebook.com/var7photography" target="_blank" class="photography"><i class="fa fa-camera fa-lg"></i></a>
+      </div>
+      <div class="line wid">
+        <span></span>
+        <i class="fa fa-paw fa-lg"></i>
+        <span></span>
+      </div>
+    </div>
+    <div class="down">
+      <a href="#blog-section"><i class="fa fa-angle-double-down fa-lg"></i></a>
+    </div>
+    <div class="photo">
+      <p><a href="https://www.facebook.com/var7photography/photos/a.233768990088995.59010.229258360540058/593878387411385/" target="_blank"><i class="fa fa-camera"></i></a> </p>
+    </div>  
+  </div>
+</div>
+<div class="blog-section" id="blog-section">
+  <div class="blog clearfix">
+    <div class="content">
+      <div class="line wid">
+        <span></span>
+        <i class="fa fa-pencil-square-o fa-lg"></i>
+        <span></span>
+      </div>
+      {% for post in site.posts %}
+        <div class="home-each-post">
+          <p>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <time class="post-date">  {{ post.date | date:'%B %d, %Y' }}</time>
+          </p>
+          <div class="content-excerpt">
+            {{ post.content | split:'<!--break-->' | first }}
+            {% if post.content contains '<!--break-->' %}
+            <a href="{{ post.url | prepend: site.baseurl }}">Continue &nbsp;<i class="fa fa-long-arrow-right"></i></a>
+            {% endif %}
+          </div>
+        </div><hr>  
+      {% endfor %}
+    </div>
+    <div class="sidebar">
+      <div class="books">
+        <h5>Books&nbsp; <i class="fa fa-book"></i></h5>
+        <ul>
+          <li>The Lean Startup</li>
+          <li>The Village by the Sea</li>
+          <li>The 4-Hour Workweek</li>
+          <li>Fooled by Randomness</li>
+        </ul>
+        <a href="/books/" title="books">More&nbsp; <i class="fa fa-long-arrow-right"></i></a>
+      </div>
+      <hr>
+      <div class="archive">
+        <h5>Archive&nbsp; <i class="fa fa-archive"></i></h5>
+        {% for post in site.posts  %}
+          {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+          {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+          {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+          {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
 
-<div class="home">
+          {% if forloop.first %}
+          <div>
+          <h4 class="yr" id="{{ this_year }}-ref">{{this_year}}</h4>
+          <p class="month" id="{{ this_year }}-{{ this_month }}-ref">{{ this_month }}</p>
+          {% endif %}
 
-  <h1 class="page-heading">Posts</h1>
+          <a href="{{ post.url }}">-&nbsp;{{ post.title }}</a><br />
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+          {% if forloop.last %}
+          </div>
+          {% else %}
+              {% if this_year != next_year %}
+              <h4 class="yr" id="{{ next_year }}-ref">{{next_year}}</h4>
+              <p class="month" id="{{ next_year }}-{{ next_month }}-ref">{{ next_month }}</p>
+              <div>
+              {% else %}    
+                  {% if this_month != next_month %}
+                  </div>
+                  <p class="month" id="{{ this_year }}-{{ next_month }}-ref">{{ next_month }}</p>
+                  {% endif %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+    </div>
+  </div>
 </div>
