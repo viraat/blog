@@ -213,16 +213,16 @@
 			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 			float: right;
 			width: 35%;
-			font-family: $clavo;
+			font-family: $brandon;
 			hr {
 				margin: 10px 0px;
 			}
 			h5 {
-					text-align: center;
-					color: $flat-pink;
+					//text-align: center;
+					color: $l-blue-black;
 					font-weight: 300;
-					font-size: 16.5px;
-					margin: 7px 0px;
+					font-size: 19px;
+					margin: 14px 0px;			
 				}
 			.archive {
 				p {
@@ -245,7 +245,7 @@
 					color: $teal;
 				}
 			}
-			.books{
+			.items{
 				padding-top: 15px;
 				ul {
 					padding-left: 20px;
@@ -254,8 +254,9 @@
 					font-size: 14.5px;
 				}
 				a {
+					color: $l-blue-black;
 					padding-left: 5px;
-					font-size: 14.5px;
+					font-size: 19px;
 				}
 			}
 			a:hover {

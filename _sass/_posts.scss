@@ -50,6 +50,13 @@
 			color: $flat-pink;
 		}
 	}
+	ul {
+
+		padding-left: 20px;
+		color: $teal;
+		margin-bottom: 4px;
+		font-size: 14.5px;
+	}
 }
 
 .comment-box {
@@ -110,5 +117,20 @@
 				color: $flat-pink;
 			}
 		}
+	}
+}
+.resume {
+	font-size: $fss*1.3;
+	text-decoration: none;
+	font-family: $clavo;
+	color: $teal;
+	.titles {
+		font-size: $fss*1.5;
+		color: $l-blue-black;
+		float: left;
+	}
+	.dates {
+		color: $l-blue-black;
+		float: right;
 	}
 }

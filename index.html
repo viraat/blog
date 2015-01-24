@@ -62,19 +62,17 @@ layout: home
       {% endfor %}
     </div>
     <div class="sidebar">
-      <div class="books">
-        <h5>Books&nbsp; <i class="fa fa-book"></i></h5>
-        <ul>
-          <li>The Lean Startup</li>
-          <li>The Village by the Sea</li>
-          <li>The 4-Hour Workweek</li>
-          <li>Fooled by Randomness</li>
-        </ul>
-        <a href="/books/" title="books">More&nbsp; <i class="fa fa-long-arrow-right"></i></a>
+      <div class="items">
+        <h5><i class="fa fa-info-circle"></i> <a href="/aboutme">&nbsp;About&nbsp;</a></h5>
+        <h5><i class="fa fa-paperclip"></i> <a href="/resume/">&nbsp;Resume&nbsp; </a></h5>
+        <h5><i class="fa fa-rocket"></i> <a href="/projects/">&nbsp;Projects&nbsp;</a></h5>
+        <!--<h5><i class="fa fa-book"></i> Books</h5>-->
+        <h5><i class="fa fa-paper-plane"></i> <a href="mailto:viraat94@gmail.com">&nbsp;Contact me&nbsp;</h5>
+        
       </div>
       <hr>
       <div class="archive">
-        <h5>Archive&nbsp; <i class="fa fa-archive"></i></h5>
+        <h5><i class="fa fa-archive"> </i> Archive&nbsp;</h5>
         {% for post in site.posts  %}
           {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
           {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
