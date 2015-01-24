@@ -4,7 +4,25 @@
   <body>
   	{% include header.html %}
     {% include navbar.html %}
+    <div class="wrap">
     {{ content }}
+    </div>
+    <label for="navbar-checkbox" class="navbar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.navbar-toggle');
+        var navbar = document.querySelector('#navbar');
+        var checkbox = document.querySelector('#navbar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             navbar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
     {% include footer.html %}
   </body>
 </html>

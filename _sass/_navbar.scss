@@ -23,15 +23,24 @@
   visibility: hidden;
   overflow-y: auto;
   font-family: $proxima-c, Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
+  font-size: $fss; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
+a {
+  text-decoration: none;
+}
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    border: 5px solid rgba(255,255,255,0.15);
+}
 @media (min-width: 30em) {
   .navbar {
-    font-size: .75rem; /* 14px */
+    font-size: $fss; /* 14px */
   }
 }
 
@@ -39,9 +48,11 @@
 .navbar a {
   font-weight: normal;
   color: #fff;
+  text-decoration: none;
 }
 .navbar-item {
   padding: 1rem;
+  text-decoration: none;
 }
 .navbar-item p:last-child {
   margin-bottom: 0;
@@ -57,8 +68,11 @@
   border-top: 1px solid rgba(255,255,255,.1);
 }
 .navbar-nav-item.active,
+.navbar-item.active,
 a.navbar-nav-item:hover,
-a.navbar-nav-item:focus {
+a.navbar-nav-item:focus, 
+a.navbar-item:hover,
+a.navbar-item:focus {
   text-decoration: none;
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
@@ -85,7 +99,7 @@ a.navbar-nav-item:focus {
   top:  1rem;
   left: 1rem;
   display: block;
-  width: 2.2rem;
+  width: 2.8rem;
   padding: .5rem .65rem;
   color: #505050;
   background-color: #fff;
@@ -138,6 +152,10 @@ a.navbar-nav-item:focus {
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
+.wrap {
+  position: relative;
+  width: 100%;
+}
 .wrap,
 .navbar,
 .navbar-toggle {
@@ -161,4 +179,23 @@ a.navbar-nav-item:focus {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
+}
+
+/*
+ * Overlay sidebar
+ *
+ * Make the sidebar content overlay the viewport content instead of pushing it
+ * aside when toggled.
+ */
+
+.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  box-shadow: 0 0 0 .25rem #fff;
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
 }
