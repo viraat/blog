@@ -2,27 +2,56 @@
 <html>
   {% include head.html %}
   <body>
-  	{% include header.html %}
-    {% include navbar.html %}
-    <div class="wrap">
-    {{ content }}
-    </div>
-    <label for="navbar-checkbox" class="navbar-toggle"></label>
+  	<div id="site-wrapper">
+    <div id="site-canvas">
 
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.navbar-toggle');
-        var navbar = document.querySelector('#navbar');
-        var checkbox = document.querySelector('#navbar-checkbox');
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          if(!checkbox.checked ||
-             navbar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
+    <div id="site-menu">
+      <img src="/images/Viraat.jpg" alt="Viraat Aryabumi" id="varphoto"></img>
+      <p>Viraat Aryabumi</p>
+      <div class="menu-items">
+        <ul>
+          <li><a href="/"><i class="fa fa-home"></i> &nbsp;Home</a></li>
+          <li><a href="/#archive"><i class="fa fa-archive"></i> &nbsp;Archive</a></li>
+          <li><a title="About" href=""><i class="fa fa-info-circle"></i> &nbsp;About</a></li>
+          <li><a title="Resume" href="/resume/viraat_aryabumi.pdf"><i class="fa fa-paperclip"></i> &nbsp;Resume</a></li>
+          <li><a title="My Projects" href="/projects/"><i class="fa fa-rocket"></i> &nbsp;Projects</a></li>
+          <li><a title="Contact Me" href="mailto:viraat94@gmail.com"><i class="fa fa-paper-plane"></i> &nbsp;Contact</a></li>
+          <li><a title="Books" href="/"><i class="fa fa-book"></i> &nbsp;Books</a></li>
+        </ul>
+      </div>
+    </div>
+    {% include header.html %}
+    <a href="#" class="toggle-nav btn btn-lg" id="big-sexy"><i class="fa fa-bars"></i></a>
+    {{ content }}
     {% include footer.html %}
+    </div>
+    </div>
+    <script>
+      /*====================================
+      =            ON DOM READY            =
+      ====================================*/
+      $(function() {
+      $('.toggle-nav').click(function() {
+      // Calling a function in case you want to expand upon this.
+      toggleNav();
+      });
+      });
+
+
+      /*========================================
+      =            CUSTOM FUNCTIONS            =
+      ========================================*/
+      function toggleNav() {
+      if ($('#site-wrapper').hasClass('show-nav')) {
+      // Do things on Nav Close
+      $('#site-wrapper').removeClass('show-nav');
+      } else {
+      // Do things on Nav Open
+      $('#site-wrapper').addClass('show-nav');
+      }
+
+      //$('#site-wrapper').toggleClass('show-nav');
+      }
+    </script>  
   </body>
 </html>
