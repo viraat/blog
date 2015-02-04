@@ -1,85 +1,365 @@
----
-layout: default
-title: Resume
----
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Resume</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords | strip_html | condense_spaces }} {{ page.keywords}}" />
+  <link rel="icon" type="image/png" href="/images/var1.png" size="16x16">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <script src="//use.typekit.net/jbc8aeq.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+	<style type="text/css">
+		body {
+			background: #f0f0f0;
+			margin: 0;
+			padding: 0;
+			
+			font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+			font-weight: 300;
+			line-height: 22px;
+			font-size: 14px;
+
+			color: #000;
+		}
+
+		h1, h2, h3, h4 {
+			font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+			font-weight: 300;
+			font-weight: normal;
+			margin: 0 0 15px 0;
+			padding: 0;
+		}
+		h1 {
+			font-size: 350%;
+		}
+		h2 {
+			font-size: 210%;
+		}
+		h3 {
+			font-size: 130%;
+		}
+		
+		p {
+			margin: 0 0 10px 0;
+		}
+		
+		ul {
+			margin: 0;
+			list-style-type: square;
+		}
+		a {
+			color: #222;
+		}
+		/* ________________________________________________________ */
+		.rtl {
+			direction: rtl;
+		}
+		.clear {
+			clear: both;
+		}
+
+		#main {
+			background: #fff;
+			width: 900px;
+			padding: 35px;
+			margin: 0 auto 15px auto;
+			overflow: hidden;
+			
+			box-shadow: 0 0 6px #ccc;
+		}
+		
+		#title {
+			line-height: 42px;
+			border-bottom: 1px solid #000;
+			padding-bottom: 20px;
+			margin: 0px 0 20px 0;
+		}
+		
+		#credit {
+			margin-bottom: 20px;
+			font-size: 11px;
+			color: #999;
+			text-align: center;
+		}
+			#credit a {
+				color: #999;
+			}
+		
+		p label {
+			font-size: 110%;
+			margin-right: 10px;
+		}
+			p label span.colon {
+				display: inline;
+			}
+
+		
+		.section {
+			margin-bottom: 25px;
+		}
+		.section .set {
+		}
+		.item {
+			margin: 0 0 20px 0;
+		}
+
+		/*  _____________________________ */
+		.section .title {
+			text-transform: uppercase;
+			font-size: 160%;
+
+			margin: 0 auto 15px auto;
+			display: block;
+		}
+			.section .set {
+				margin-left: 25px;
+			}
+			.section .set h3 {
+				margin: 0;
+			}
 
 
 
- 
+		.basic-info {
+			border-top: 0;
+		}
+		.section.basic-info .title {
+			float: left;
+			border: 0;
+		}
+		.basic-info .set {
+			float: right;
+			width: 70%;
+		}
+		.basic-info .address {
+			width: 40%;
+			float: left;
+		}
+		.basic-info .r {
+			float: right;
+			width: 50%;
+			text-align: right;
+		}
+			.basic-info label {
+				font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+				font-weight: 300;
+			}
+			.basic-info label, .basic-info span  {
+				display: inline !important;
+			}
+		.basic-info p {
+			margin: 0;
+		}
+		
+		.section span {
+			display: block;
+		}
+		.section h3 span.l, .section span.r {
+			width: 49%;
+			float: left;
+		}
+			.section span.r {
+				float: right;
+				text-align: right;
+			}
+			.section-education .school,
+			.section-work .job_title {
+				font-size: 100%;
+				display: block;
+				margin: 5px 0 5px 0;
+			}
+
+		#photo {
+			width: 160px;
+			height: 200px;
+			overflow: hidden;
+			float: left;
+			margin-top: 4px;
+			border-radius: 4px;
+		}
+		#photo img {
+			width: 100%;
+			height: auto;
+		}
+		.header.photo {
+			margin-left: 190px;
+		}
+		.header.photo #title {
+			text-align: left;
+		}
+		.header.photo .basic-info {
+			float: none;
+			padding: 0;
+		}
 
 
-Relevant
-Coursework
+		@media screen and (max-width: 950px) {
+			body {
+				background: #fff;
+			}
+			#main {
+				box-shadow: none;
+				padding: 0;
+				padding: 5px;
+			}
+		}
+		.foot {
+ 			color: #495F75;
+  			border-top: 1px solid #d9d9d9; }
+		.foot .foot-wrap {
+			width: 46%;
+			margin: 0 auto;
+			padding: 10px 30px;
+			text-align: center;
+			font-size: 13px; }
+		.foot .foot-wrap p {
+  			margin-bottom: 0px;
+  			letter-spacing: 2px;
+  			font-family: "proxima-nova-sc-osf", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  		}
+  		.foot .foot-wrap p .fa-heart {
+  		  color: #BD0041; 
+  		}
+  		.foot .foot-wrap p a {
+  		  color: #2B7CB2; 
+  		}
+  		  .foot .foot-wrap p a:hover {
+  		    text-decoration: none;
+  		    color: #D2527F; 
+  		}
+  		.back {
+    		position: fixed;
+    		top: 40px;
+    		left: 20px; 
+    	}
+    	.back a:hover {
+      		color: #D2527F; 
+      	}
+	</style>
+</head>
+<body class="lang-en ">
 
+<div id="main">
+			<div id="photo">
+			<img src="/images/Viraat.jpg" alt="" />
+		</div>
+		<div class="header photo">
+	
+	<h1 id="title">Viraat Reddy Aryabumi</h1>
+	<div class="basic-info section">
+		<h2 class="title">Contact</h2>
+		<div class="set">
+		
+							<p class="address">
+					<span class="value">
+						78, Road number 7A<br />Women's cooperative society, Jubilee hills<br />Hyderabad, India - 500033					</span>
+				</p>
+						<div class="r">
+									<p class="email"><span class="value"><a href="mailto:viraat94@gmail.com">viraat94@gmail.com</a></span></p>
+				
+									<p class="website"><span class="value"><a href="varuponyou.in">varuponyou.in</a>, <a href="www.facebook.com/var7photography">www.facebook.com/var7photography</a>, <a href="github.com/var7">github.com/var7</a></span></p>
+				
+							</div>
+			<div class="clear"> </div>
+		</div><!-- set //-->
+		<div class="clear"> </div>
+	</div><!-- basic-info //-->
 
-
-
-
-
-
-
-
-
-Hands-on
-Experience
-
- 
-
-
-
-
-Relevant Project
-
-
-SW skills
-Activities
-
-
-
-
-
-
-
- 
-
-•	Introduction to C and C++
-•	Data Structures using C and C++
-•	Discrete Mathematics
-•	Digital Electronics and Logic Design
-•	Micro Electronics
-•	Electrical Circuits and Machines
-•	Object Oriented Programming using Java
-•	Data Communications
-•	Computer Organization and Micro Processors
-•	Signals and Systems
-•	Web Technologies
-
-•	C and C++ Lab
-•	Basic Electronics Lab
-•	Data Structures using C++ lab
-•	Web Technologies Lab
-•	Java Lab
-•	Microprocessor Lab
- 
-•	Project on basic encryption and decryption of simple messages, 
-Dept. of Information Technology, CBIT 						 (1/10/2013 – 1/12/2013)
-•	Project on android app development using Java, CBIT                                                          (20/1/2014 – present)
-Dept. of Information Technology, CBIT  
-•	Project on Website development using Web Technologies, CBIT                                         (20/1/2014 – present)
-Dept. of Information Technology, CBIT 
- 
-•	Matlab, Octave, Python
-•	MS Office
-
-•	Ranked number 3 in ‘B’ Category at Junior Golf in India South Zone
-•	Won the Kodai Golf Open in 2009 (‘B’ Category)
-•	Finished 3rd at the Coorg Junior Open (2009), Ooty Junior Open(2009), Hyderabad Junior Open (2012) Golf Championships
-•	Photography (www.facebook.com/var7photography/)
-•	Video reviews of custom Android ROMS (www.youtube.com/redpihd/)
-•	Director of the ITU at CBITMUN 2013
-•	Charge D’Affaires of CBITMUN 2014
-•	Publicity team member of Carpe Diem, the biannual fest of CBIT
-•	Represented Bharatiya Vidya Bhavan School in Cricket and Football
-•	Represented CBIT in Football
-•	Grade 3 western classical piano from Royal School of Music, London.
-
+			</div><div class="clear"> </div>
+	
+		
+			<div class="section section-work">
+			<h2 class="title">Work experience</h2>
+			<div class="set">
+							<div class="item">
+								<h3><span class="company l">Social Entreprenuership Lab, Stanford University</span>
+						<span class="date r">27 July 2014 &mdash; 29 August 2014</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="job_title">Assistant Product Engineer and Cultural Specialist</span><span class="info">The goal of the project was to create a low-cost, compact demonstration kit for the drip irrigation company <strong>Driptech</strong>, headquartered in India.The <strong>DiscoverDrip Demo Kit</strong> is a demonstration tool created for Driptech, a company that produces low-cost, high-quality drip irrigation systems for small-plot farmers in developing countries. Driptech sales officers will use the Demo Kit during marketing activities to generate interest in drip irrigation among farmers and demonstrate some of the defining features of company’s products. The Demo Kit, composed of a self-standing, durable plastic bag connected to the Driptech takeoff valve and driptape, is simple to use, compact for easy transportation and costs only about $1 to manufacture. <br />You can view the project page at http://extreme.stanford.edu/projects/discoverdrip <br /></span><span class="clear"> </span>
+							</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-education">
+			<h2 class="title">Education</h2>
+			<div class="set">
+						<div class="item">
+							<h3><span class="course l">Bachelor's of Engineering, Information Technology</span>
+						<span class="date r">September 2012 &mdash; Present</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">Chaitanya Bharathi Institute of Technology</span><span class="info"><strong>Osmania University, Hyderabad, India</strong><br />Academic Score (till present) - <strong>82.5%</strong></span><span class="clear"> </span>
+						</div>
+						
+						<div class="item">
+							<h3><span class="course l">12th Grade</span>
+						<span class="date r">2010 &mdash; 2012</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">FIITJEE Junior College,</span><span class="info"><strong>Board of Intermediate Education Andhra Pradesh</strong><br />Academic Score - <strong>90.5%</strong></span><span class="clear"> </span>
+						</div>
+						
+						<div class="item">
+							<h3><span class="course l">10th Grade</span>
+						<span class="date r">2005 &mdash; 2010</span>
+							</h3>
+							<span class="clear"> </span>
+							<span class="school">Bharatiya Vidya Bhavan's Public School, Jubilee Hills, Hyderabad</span><span class="info"><strong>Central Board of Secondary Education</strong><br />Academic Score - <strong>9.2/10</strong> (CGPA)</span><span class="clear"> </span>
+						</div>
+						</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-1422777402055">
+			<h2 class="title">Relevant Coursework</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><ul><li>Introduction to C and C++</li><li>Data Structures using C and C++</li><li>Discrete Mathematics</li><li>Digital Electronics and Logic Design</li><li>Micro Electronics</li><li>Electrical Circuits and Machines</li><li>Object Oriented Programming using Java</li><li>Data Communications</li><li>Computer Organization and Micro Processors</li><li>Signals and Systems</li><li>Web Technologies</li><li>Digital Signal Processing</li><li>Theory of Automata</li><li>Operating Systems</li><li>Managerial Economics and Accountancy</li><li>Database Management Systems</li><li>Software Engineering</li></ul></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-1422777759287">
+			<h2 class="title">Projects</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><ul><li>Project on <strong>basic encryption and decryption of simple messages</strong>, <br />Dept. of Information Technology, CBIT 						 <em>(1/10/2013 – 1/12/2013)</em></li><li>Project on <strong>Android app development using Java</strong>,                                                        <br /> Dept. of Information Technology, CBIT 						<em>(20/1/2014 – 20/4/2014)</em></li><li>Project on <strong>Website development using Web Technologies</strong>, CBIT                                         <br />Dept. of Information Technology, CBIT 						<em>(20/7/2014 – 20/12/2014) </em></li></ul><br /><br /></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+			<div class="section section-1422777486183">
+			<h2 class="title">Accomplishments</h2>
+			<div class="set">
+						<div class="item">
+							<span class="info"><ul><li>Ranked number 3 in ‘B’ Category at Junior Golf in India South Zone.</li><li>Won the Kodai Golf Open in 2009 (‘B’ Category).</li><li>Finished 3rd at the Coorg Junior Open (2009), Ooty Junior Open(2009), Hyderabad Junior Open (2012) Golf Championships.</li><li>Photography (www.facebook.com/var7photography/).</li><li>Video reviews of custom Android ROMS (www.youtube.com/redpihd/).</li><li>Director of the ITU at CBITMUN 2013.</li><li>Charge D’Affaires of CBITMUN 2014.</li><li>Publicity team member of Carpe Diem, the biannual fest of CBIT.</li><li>Represented Bharatiya Vidya Bhavan School in Cricket and Football.</li><li>Represented CBIT in Football.</li><li>Grade 3 western classical piano from Royal School of Music, London.</li><li>Core team member, Google Student Club, CBIT.</li><li>Design Head, Tecstasy 2014 (Departmental Fest), CBIT</li></ul><br /><br /></span>
+						</div>
+					</div>
+			<div class="clear"> </div>
+		</div>
+		
+</div>
+<div class="back">
+  	<a href="varuponyou.in" title=""><i class="fa fa-chevron-left"></i></a>
+  </div>
+	<div class="foot">
+  		<div class="foot-wrap">
+    		<p>Made by <a href="http://www.varuponyou.in" target="_blank">Viraat Aryabumi <a href="mailto:viraat94@gmail.com" target="_top"><i class="fa fa-paper-plane"></i></a></a></p>
+    		<p>Theme credits <i class="fa fa-code-fork"></i> <a href="https://github.com/akash-bhardwaj" target="_blank">Akash Bhardwaj</a></p>
+    		<p>Made with <a href="https://cvmkr.com/">CV Maker</a></p>
+  		</div>
+	</div>
+</body>
+</html>
