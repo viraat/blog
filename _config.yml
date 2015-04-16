@@ -1,18 +1,16 @@
-name: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+name: Be.
+description: Viraat Aryabumi's blog
 
-url: http://brianmaierjr.github.com/long-haul
+url: viraataryabumi.in
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 5
 
 navigation:
  - title: Home
    url: /index.html
  - title: About
-   url: /about
- - title: Contact
-   url: /contact
+   url: viraataryabumi.info
