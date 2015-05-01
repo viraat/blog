@@ -1,16 +1,17 @@
-name: Be.
-description: Viraat Aryabumi's blog
+# Site settings
+title: Thoughts
+header-img: img/home-bg.jpg
+email: viraat94@gmail.com
+description: "A place where I share my thoughts about all things life"
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: viraat7
+github_username:  var7
+facebook_username:  viraat94
 
-url: viraataryabumi.in
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
-
-markdown: redcarpet
+# Build settings
+markdown: kramdown
 highlighter: pygments
+permalink: pretty
 paginate: 5
-
-navigation:
- - title: Home
-   url: /index.html
- - title: About
-   url: viraataryabumi.info
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
