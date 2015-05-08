@@ -2,7 +2,7 @@
 layout: page
 title: "Archive"
 description: "Some old stuffs."
-header-img: "img/about-bg.jpg"
+header-img: "img/archive-bg.jpg"
 ---
 
 ## Blog Posts
