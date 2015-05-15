@@ -194,7 +194,7 @@ hr.small {
   font-weight: 300;
   font-size: 20px;
 }
-.intro-header .post-heading .meta a {
+.intro-header .post-heading .meta .post-meta .meta-tag a {
   color: white;
 }
 @media only screen and (min-width: 768px) {
@@ -231,11 +231,11 @@ hr.small {
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
-  color: #404040;
+  color: white;
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: white;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -268,7 +268,13 @@ footer .list-inline {
 footer .copyright {
   font-size: 14px;
   text-align: center;
-  margin-bottom: 0;
+  margin-top: .5em
+  margin-bottom: .3em;
+}
+.contact {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: .3em;
 }
 .floating-label-form-group {
   font-size: 14px;
@@ -373,6 +379,19 @@ form .row:first-child .floating-label-form-group {
   color: #808080;
   background-color: #404040;
   cursor: not-allowed;
+}
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+.share {
+  text-align: center;
+  margin-bottom: .3em;
 }
 ::-moz-selection {
   color: white;
