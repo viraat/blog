@@ -14,8 +14,14 @@ description: "Food • Photography • Code • Golf"
         </h3>
         {% endif %}
     </a>
-    <p>{{ post.content | strip_html | truncatewords:75}}</p>
-            <a href="{{ post.url | prepend: site.baseurl}}">Read more...</a>
+    <p>
+    {% if post.content contains "<!-- more -->" %}
+        {{ post.content | split:"<!-- more -->" | first % }}
+    {% else %}
+        {{ post.content | strip_html | truncatewords:75 }}
+    {% endif %}
+    </p>
+    <a href="{{ post.url | prepend: site.baseurl}}">Read more...</a>
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
