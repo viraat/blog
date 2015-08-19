@@ -5,7 +5,7 @@ subtitle:
 date:       2010-06-29 2:22:00
 author:     "Viraat Aryabumi"
 tags: [photography]
-header-img: "img/post-bg-01.jpg"
+header-img: "img/post-01-bg.jpg"
 ---
 
 <p>A photo reminds us, who we were, what we have become and helps us to reflect at how we have turned out to be. Photos capture moments which we want to remember for the rest of our lives. Being an avid photographer myself, capturing landscapes and nature's serenity is a fun way to relax. The nostalgia felt when one sees old photos of friends, childhood and fun is feeling which can only be gotten from looking at photos. Some of our adventures are etched into our memory, the rest can be preserved carefully in the form of videos and photos. </p>
