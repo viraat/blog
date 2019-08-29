@@ -107,8 +107,16 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
+  float: center;
+  text-align: center;
   padding: $spacing-unit 0;
 }
+
+.footer-text {
+  color: $grey-color-dark;
+  @include relative-font-size(0.875);
+}
+
 
 .footer-heading {
   @include relative-font-size(1.125);
