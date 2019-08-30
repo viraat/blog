@@ -7,7 +7,7 @@
         &copy; 2019 |  Built by Jekyll and <a href="https://github.com/jekyll/minima/" target="_blank">minima</a> |
 
         {%- if site.github_username -%}
-        <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
+        <a class="footer-social" href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
           <svg class="svg-icon">
             <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}">
             </use>
@@ -15,7 +15,7 @@
         </a>
         {%- endif -%}
         {%- if site.linkedin_username -%}
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
+        <a class="footer-social" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
           <svg class="svg-icon">
             <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}">
             </use>
@@ -23,14 +23,14 @@
         </a>
         {%- endif -%}
         {%- if site.twitter_username -%}
-        <a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}">
+        <a class="footer-social" href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}">
           <svg class="svg-icon">
             <use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
           </svg>
         </a>
         {%- endif -%}
         {%- if site.rss -%}
-        <a href="{{ 'feed.xml' | relative_url }}">
+        <a class="footer-social" href="{{ 'feed.xml' | relative_url }}">
           <svg class="svg-icon">
             <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
           </svg>

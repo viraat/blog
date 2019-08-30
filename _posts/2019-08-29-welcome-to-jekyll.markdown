@@ -1,29 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-08-29 19:10:14 +0100
+title:  "Why?"
+date:   2019-08-29
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Why am I doing this?  
 
-Jekyll requires blog post files to be named according to the following format:
+I'm not entirely sure, but I know that when I write about something, I understand it well. There is a bunch of understanding I get from reading about things, [ankifying](http://augmentingcognition.com/ltm.html) them and even putting them to practice. But nothing comes close to writing about things.  
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Writing (the rare few times I have done it), gives me clarity. Often, I am forced to confront the uncomfortable fact that I don't understand something as well as I thought I did. It's probably why I don't write as much as I should. I'm scared that I will realize I don't understand something as well I believe. But that's **exactly** what I need to get better. To improve.  
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Why should I improve? I'm not sure I have a straight answer to that. It might be the way I've been brought up, or maybe it's just me, but I can't not want to get better. It just **feels** wrong.  
 
-Jekyll also offers powerful support for code snippets:
+So, I should write a lot. There are many excuses I make for not writing: I have this fear of putting my thoughts out there. I also have a small streak of a perfectionist where I think many of the things I do aren't "perfect" yet. I'll never write anything if I wait for perfect. So I'm going to put this stuff out there. It's going to be imperfect, it's going to have typos, errors and some poor grammar in there (my usage of commas is random at best). My goal is to write, and I will. Perfection be damned.  
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+But to be honest, I'm doing this for myself. Whenever I've previously tried to write and put something up on the Internet, there were other reasons. I wanted to share my writing, I wanted to use it as a medium, I wanted to showcase my skills, I thought it'd help me get into a University, I thought it'd help me get a job. I graduated Uni, I got a job. But all of those reasons ensured I never wrote a lot. So I'm just going to do this for myself.  
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Some of these posts (like this one) are going to be rambly and ranty to you. Some of them will be clear, simple and maybe even basic to you. But they're all going to be at a place where I'm happy with my understanding of them. That's all I'm hoping to get out of this. That's **why**[^1].  
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+[^1]: If you're wondering whether you should write, I'm not going to try to convince you. You need to want to write,. Steve Yegge makes a good argument for [why you should write blogs](https://sites.google.com/site/steveyegge2/you-should-write-blogs). [Dan Luu](https://danluu.com/about/) also makes a case that there is always a gap waiting to be filled with your knowledge.

@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: yearning for learning
+title: why?
 description: >- # this means to ignore newlines until "baseurl:"
+  Why? A place where I document what has happened whenever I've asked why?
   Random thoughts, explainers for myself, articles I find 
   interesting and links to places on the Internet I like.
 baseurl: "/blog" # the subpath of your site, e.g. /blog

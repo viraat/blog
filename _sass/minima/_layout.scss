@@ -115,6 +115,9 @@
 .footer-text {
   color: $grey-color-dark;
   @include relative-font-size(0.875);
+  .footer-social {
+    text-decoration: none;
+}
 }
 
 
@@ -122,6 +125,7 @@
   @include relative-font-size(1.125);
   margin-bottom: $spacing-unit / 2;
 }
+
 
 .contact-list,
 .social-media-list {
