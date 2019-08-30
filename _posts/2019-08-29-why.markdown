@@ -2,7 +2,7 @@
 layout: post
 title:  "Why?"
 date:   2019-08-29
-categories: jekyll update
+tag: blog
 ---
 Why am I doing this?  
 
