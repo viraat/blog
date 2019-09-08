@@ -34,6 +34,7 @@ A place where I list links to interesting, fascinating places that I like on the
 * Steve Yegge's Blog rants: <https://steve-yegge.blogspot.com>
 * Dan Luu - Code Recurse: <https://danluu.com>
 * Bret Victor: <http://worrydream.com/>
+* [Google's Engineering Practices documentation](https://google.github.io/eng-practices/)
 * <http://www.craftinginterpreters.com>
 
 ### science/general
