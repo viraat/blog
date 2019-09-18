@@ -24,6 +24,9 @@ A place where I list links to interesting, fascinating places that I like on the
 * Chris Sutton: <http://www.theexclusive.org>
 * Stephen Merity: <https://smerity.com>
 * Joel Grus (Data Science from scratch): <https://joelgrus.com>
+* Francis Bach: <https://francisbach.com/>
+* Sebastian Bubech: <https://blogs.princeton.edu/imabandit/>
+* <http://hunch.net/>
 * <http://blog.echen.me>
 * <https://kiranvodrahalli.github.io/links/>
 * <https://khanna.cc/blog/>
