@@ -1,5 +1,12 @@
-## Transformer: attention is all you need
-tags: [language models, transformers, pre-training]
+---
+layout: post
+title:  "Transformer: attention is all you need"
+date:   2019-07-03
+tag: [language models, transformers, pre-training]
+---
+
+Let's get transforming!
+
 - New sequence transduction model solely based on attention mechanisms
 - **Goal**: Superior translation quality + less training time; make parallelizable
 - **Idea**: Attention mechanism used to draw global dependencies between input and output. Replace recurrent layers with multi-headed self attention.

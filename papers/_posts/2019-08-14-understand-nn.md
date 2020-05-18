@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "what does it mean to understand a neural network?"
-date:   2019-08-05
+date:   2019-08-14
 tag: paper, neuroscience, optimization
 ---
+
+NNs provide direction for neuroscience research.
 
 - Core idea: Neuroscience should focus of learning and development to understand how the brain works.
 - Motivation: NNs are easily understood in *how they learn*. It is very hard to understand the exact processing they are doing by looking at the weight matrices.
@@ -16,7 +18,7 @@ tag: paper, neuroscience, optimization
     - system like go with very large number of possible states *cannot* be "solved" by a compactly expressed system. 
   - Systems that solve a broad range of interesting problems at human level *should be less compressible* than specialized system like AlphaGo. (Humans can play Go and do other things)
   - Answer: Expect broadly applicable systems to be hard (or impossible) to compress into a small size.
-![](/imgs/understand-nn-compressibility.png)
+![]({{site.baseurl}}/assets/imgs/papers/understanding-nn/understand-nn-compressibility.png)
 - How ML scientists are trying to understand NNs:
   - Analysis: look for optimization phenomena (vanishing gradients, exploding global dynamics). These do not provide a meaningful understanding of the computations done by the system, only allow diagnosis.
   - Intuitive understanding: stimuli that can fool the system, visualize elements, perturbation analysis. These are not advanced enough to give a meaningful understanding.
@@ -33,5 +35,5 @@ tag: paper, neuroscience, optimization
   - The nature part (training info) of NN papers can be expressed in small human understandable equations, i.e. they are *compressible*
   - Argument that a similar finding for brains is possible, however, trying to understand the nurture part might be very hard (given how hard it is for NNs).
   - Conclusion: focus on understanding the nature part, i.e. how the brain is setup for learning and how it learns. The popular approaches used to study brains can readily be focused on studying the nature component as opposed to nurture component.
-![](/imgs/understand-nn-nature-nurture-principles-data.png)
+![]({{site.baseurl}}/assets/imgs/papers/understanding-nn/understand-nn-nature-nurture-principles-data.png)
 - **Instead of asking how the brain works, arguably, ask *how it learns to work***

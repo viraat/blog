@@ -1,8 +1,16 @@
-# Full  Stack DL Notes
+---
+layout: post
+title: Full stack deep learning
+tags: [deep learning, full stack]
+date: 2020-05-15
+---
 
-**Lecture 2: ML Projects**
+Summary of notes taken while viewing the full stack deep learning bootcamp.  
+
+## Lecture 2: ML Projects
+
 - Lifecycle of a ML project
-![](full-stack-dl-imgs/lifecycle-1.png)
+![]({{site.baseurl}}/assets/imgs/posts/full-stack/lifecycle-1.png)
   - Planning and project setup
     - what problem; 
     - How; 
@@ -30,7 +38,7 @@
     - Understand SOTA in your domain
       - what's possible
       - what to try next
-![](full-stack-dl-imgs/lifecycle-detail.png)
+![]({{site.baseurl}}/assets/imgs/posts/full-stack/lifecycle-detail.png)
 - Planning and project setup
   - Prioritizing projects and choosing goals
     - Find high-impact ML problems
@@ -47,13 +55,13 @@
       - **Look for complicated rule-based software and see if 2.0 can come up with better software**
   - Assessing feasibility
     - The pyramid:
-    - ![](full-stack-dl-imgs/feasibility-ml.png)
+![]({{site.baseurl}}/assets/imgs/posts/full-stack/feasibility-ml.png)
     - How do you know how much data do you need?
       - Rule of thumb: *At least* **10,000** examples for DL
       - looking at SOTA implementations and seeing how much data they used for obtaining the results that they did
     - You can setup structure around your model that prevents it from making confident wrong prediction
     - Accuracy requirement scaling
-      - ![](full-stack-dl-imgs/accuracy-scale.png)
+![]({{site.baseurl}}/assets/imgs/posts/full-stack/accuracy-scale.png)
       - ML project costs tend to scale super-linearly in the accuracy requirement
       - You can make product design choices to reduce your accuracy cost
         - FB tag for faces, suggested. 
